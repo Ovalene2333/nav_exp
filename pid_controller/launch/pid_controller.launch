@@ -1,0 +1,5 @@
+<launch>
+	<rosparam file="$(find pid_local_planner)/config/pid_controller.yaml" command="load" />
+	<!-- 启动 PID 控制器节点 -->
+	<node pkg="pid_local_planner" type="pid_controller_node" name="pid_controller" output="screen" />
+</launch>

@@ -1,0 +1,32 @@
+# 正常导航的参数
+kp_x: 5.0 # x 轴比例系数 (增大该值可以加快响应速度)
+ki_x: 0.0001 # x 轴积分系数 (增大该值可以减小稳态误差，但可能导致超调)
+kd_x: 0.5 # x 轴微分系数 (增大该值可以抑制震荡，但也可能降低响应速度)
+kp_y: 5.0 # y 轴比例系数
+ki_y: 0.0001 # y 轴积分系数
+kd_y: 0.5 # y 轴微分系数
+max_vel_x: 2.0 # 最大 x 轴速度 (单位：m/s)
+max_vel_y: 2.0 # 最大 y 轴速度 (单位：m/s)
+tolerance: 0.1 # 到达目标点的容忍距离 (单位：m)
+lookahead_distance_factor: 0.5 # 前瞻距离指数
+costmap_threshold: 80 # 障碍物阈值 (0-100，值越大表示越严格的障碍物判定)
+physic_vmax_rate: 2.0
+
+# 过狗洞时候的参数
+# kp_x: 2.0 # x 轴比例系数 (增大该值可以加快响应速度)
+# ki_x: 0.00 # x 轴积分系数 (增大该值可以减小稳态误差，但可能导致超调)
+# kd_x: 0.2 # x 轴微分系数 (增大该值可以抑制震荡，但也可能降低响应速度)
+# kp_y: 2.0 # y 轴比例系数
+# ki_y: 0.00 # y 轴积分系数
+# kd_y: 0.2 # y 轴微分系数
+# max_vel_x: 1.0 # 最大 x 轴速度 (单位：m/s)
+# max_vel_y: 1.0 # 最大 y 轴速度 (单位：m/s)
+# lookahead_distance_factor: 0.3 # 前瞻距离指数
+# costmap_threshold: 80 # 障碍物阈值 (0-100，值越大表示越严格的障碍物判定)
+
+# 一样的参数
+tolerance: 0.1 
+global_frame: "map" # 全局坐标系
+robot_base_frame: "base_link" # 机器人基坐标系
+cmd_topic: "/cmd_vel_pid"
+diff_vel_topic: "/cmd_vel_diff"
